@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Usage Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo"><span>⚡</span> EnergyTrack</div>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#appliances">Appliances</a>
+      <a href="#tips">Tips</a>
+    </nav>
+  </header>
+
+  <main id="dashboard">
+    <section class="welcome">
+      <div>
+        <p class="date">THURSDAY, 27 AUGUST</p>
+        <h1>Electricity Usage Tracker</h1>
+        <p>Track your home's energy use and monthly electricity cost.</p>
+      </div>
+      <button id="period-button">This Month</button>
+    </section>
+
+    <section class="summary">
+      <article class="card usage-card">
+        <p class="label">TOTAL USAGE</p>
+        <h2 id="usage-total">284.6 <small>kWh</small></h2>
+        <p class="change" id="usage-change">↑ 8.4% compared to last month</p>
+        <div class="chart">
+          <div class="bar-group"><div class="bar one"></div><span>1</span></div>
+          <div class="bar-group"><div class="bar two"></div><span>5</span></div>
+          <div class="bar-group"><div class="bar three"></div><span>10</span></div>
+          <div class="bar-group"><div class="bar four"></div><span>15</span></div>
+          <div class="bar-group"><div class="bar five"></div><span>20</span></div>
+          <div class="bar-group"><div class="bar six"></div><span>25</span></div>
+          <div class="bar-group"><div class="bar seven"></div><span>27</span></div>
+        </div>
+        <p class="average" id="average-use">Average daily use: <strong>10.5 kWh</strong></p>
+      </article>
+
+      <article class="card bill-card">
+        <p class="label">ESTIMATED BILL</p>
+        <h2 id="bill-total">₹2,412.80</h2>
+        <p id="bill-date">For 01–31 Aug 2026</p>
+        <hr>
+        <div class="bill-row"><span>Budget used</span><strong id="budget-percent">68%</strong></div>
+        <div class="progress"><div id="progress-bar"></div></div>
+        <p id="remaining-budget">₹1,087.20 remaining</p>
+      </article>
+    </section>
+
+    <section class="notice" id="tips">
+      <strong>Energy tip:</strong> Your usage is higher than last month. Turn off appliances when they are not in use.
+    </section>
+
+    <section class="details" id="appliances">
+      <article class="card appliance-card">
+        <h2>Top Appliances</h2>
+        <p class="muted">Where your electricity is being used</p>
+        <table>
+          <thead><tr><th>Appliance</th><th>Room</th><th>Usage</th><th>Share</th></tr></thead>
+          <tbody>
+            <tr><td>❄ Air conditioner</td><td>Living room</td><td>96.2 kWh</td><td>34%</td></tr>
+            <tr><td>♨ Water heater</td><td>Bathroom</td><td>51.8 kWh</td><td>18%</td></tr>
+            <tr><td>▣ Refrigerator</td><td>Kitchen</td><td>38.7 kWh</td><td>14%</td></tr>
+            <tr><td>◉ Washing machine</td><td>Utility</td><td>24.5 kWh</td><td>9%</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card goal-card">
+        <p class="label">MONTHLY GOAL</p>
+        <h2>Stay under ₹3,500</h2>
+        <div class="circle"><strong>68%</strong><span>used</span></div>
+        <p><strong>₹2,412.80</strong> of ₹3,500 used</p>
+        <p class="muted">You have ₹1,087.20 remaining this month.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 EnergyTrack · Simple electricity monitoring</footer>
+</body>
+</html>
